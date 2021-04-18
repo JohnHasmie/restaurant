@@ -1,0 +1,20 @@
+{
+    "name": "vendor/name",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yahya Al Hasymi",
+            "email": "yahyahasymi@gmail.com"
+        }
+    ],
+    "require": {
+        "facebook/graph-sdk": "^5.7",
+        "google/apiclient": "^2.0",
+        "paypal/rest-api-sdk-php": "*",
+        "stripe/stripe-php": "^7.77",
+        "guzzlehttp/guzzle": "~5.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4"
+    }
+}

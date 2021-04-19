@@ -7,7 +7,7 @@ class Restaurant extends Database {
     private $table_name = "restaurants";
     private $currentLocation;
   
-    public function __construct($currentLocation){
+    public function __construct($currentLocation = false){
         $this->pdo = $this->connect();
         $this->currentLocation = $currentLocation;
     }
@@ -33,6 +33,22 @@ class Restaurant extends Database {
 
         // echo '<pre>'.print_r($restaurants, 1).'</pre>';
         return $restaurants;
+    }
+
+    public function getById($id){
+        //select all data
+        $query = "SELECT
+                    *
+                FROM
+                    $this->table_name 
+                WHERE `id` = $id";
+  
+        $stmt = $this->pdo->prepare( $query );
+        $stmt->execute();
+
+        $restaurant = $stmt->fetch();
+
+        return $restaurant;
     }
 
     public function getDistance($restaurant) {

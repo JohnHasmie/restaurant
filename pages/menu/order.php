@@ -78,7 +78,7 @@
         });
     </script> -->
     <div>
-        <a href="../includes/logout.inc.php">Log Out</a>
+        <a href="../../includes/logout.inc.php">Log Out</a>
     </div>
 </body>
 </html>
